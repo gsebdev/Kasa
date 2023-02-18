@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { redirect, useNavigate, useParams } from "react-router-dom"
 import api from "../api/api"
 import Collapse from "../components/Collapse"
 import Ratings from "../components/Ratings"
@@ -10,6 +10,7 @@ export default function Details() {
     const [ error, setError ] = useState(false)
     const [details, setDetails ] = useState({})
     const { id } = useParams()
+    const navigate = useNavigate()
     useEffect(() => {
         const getDetails = async () => {
             try {
@@ -17,6 +18,9 @@ export default function Details() {
                 setDetails(accomodation)
             }
             catch(error) {
+                if(error.cause === 404){
+                    navigate('not-found')
+                }
                 setError(true)
                 console.log(error)
             }

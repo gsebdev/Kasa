@@ -10,7 +10,17 @@ const api = {
         const response = await fetch('http://localhost:3000/logements.json')
         const accomodationsList = await response.json()
         const accomodation = accomodationsList.find(item => item.id === id)
-        return accomodation
+        
+        if(!accomodation) {
+            throw new Error('error', {cause: 404})
+        }
+
+        return accomodation     
+    },
+    getAllAbout: async () => {
+        const response = await fetch('http://localhost:3000/about.json')
+        const aboutTextsList = await response.json()
+        return aboutTextsList
     }
     
 }
