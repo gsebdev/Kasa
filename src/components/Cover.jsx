@@ -1,3 +1,5 @@
+import '../assets/scss/components/cover.scss';
+
 export default function Cover({ image, altText='', title=null, additionalClass='' }){
     return (
         <div className={'cover ' + additionalClass}>

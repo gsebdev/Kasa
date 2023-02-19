@@ -4,6 +4,7 @@ import homeCover from '../assets/img/home-cover.jpg'
 import Cover from "../components/Cover"
 import Loading from "../components/Loading"
 import { useLoaderData } from "react-router-dom"
+import '../assets/scss/pages/home.scss';
 
 function Home() {
     const [ loading, setLoading ] = useState(true)

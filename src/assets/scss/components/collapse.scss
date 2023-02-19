@@ -1,0 +1,52 @@
+@import '../variables.scss';
+
+.collapse {
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 20px;
+        background-color: $primary-color;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        height: 52px;
+        box-sizing: border-box;
+    }
+    &__title {
+        color: white;
+        font-weight: 500;
+    }
+    &__icon {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease-in-out;
+        img {
+            height: 26px;
+            width: 16px;
+            object-fit: contain;
+            transform: rotate(90deg);
+        }
+        
+    }
+    &__body {
+        background-color: $secondary-color;
+        margin: -10px 0 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s;
+        & > * {
+            display: block;
+            padding: 40px 20px 27px;
+        }
+    }
+    &.open {
+        .collapse__{
+            &icon{
+                transform: rotate(0);
+            }
+        }
+    }
+}

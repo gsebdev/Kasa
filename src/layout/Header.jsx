@@ -1,5 +1,6 @@
 import { Link, useMatch } from 'react-router-dom'
 import logo from '../assets/img/logo.png'
+import '../assets/scss/layout/header.scss'
 
 export default function Header(){
     return (

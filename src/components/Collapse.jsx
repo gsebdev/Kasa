@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import arrow from '../assets/img/arrow-navigation.svg'
+import '../assets/scss/components/collapse.scss';
+
 
 export default function Collapse({ title, body, className='' }) {
     const [ open, setOpen ] = useState(false)

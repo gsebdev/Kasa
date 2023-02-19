@@ -1,0 +1,13 @@
+@import '../variables.scss';
+.home {
+    &__row {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 60px;
+        row-gap: 50px;
+        background-color: $secondary-color;
+        border-radius: 25px;
+        padding: 56px 50px;
+    }
+}

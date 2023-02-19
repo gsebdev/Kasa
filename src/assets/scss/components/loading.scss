@@ -1,0 +1,29 @@
+@import '../variables.scss';
+
+.loader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+  &__spinner{
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: radial-gradient(farthest-side,$primary-color 94%,#0000) top/9px 9px no-repeat,
+            conic-gradient(#0000 30%,$primary-color);
+        -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+        animation: spin 1s infinite linear;
+    }  
+} 
+ 
+ @keyframes spin {
+    100% {
+       transform: rotate(1turn);
+    }
+ }

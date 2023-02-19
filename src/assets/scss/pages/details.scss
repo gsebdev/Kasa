@@ -1,0 +1,70 @@
+@import '../variables.scss';
+
+.accomodation__{
+    &cover {
+        height: 415px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+        display: block;
+    }
+    &host {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        img{
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            margin-left: 10px;
+        }
+        p {
+            text-align: right;
+            margin: 0;
+        }
+    }
+    &title {
+        margin: 6px 0 0;
+        line-height: 51px;
+        vertical-align: middle;
+    }
+    &location {
+       margin: 0;
+       display: block;
+       font-size: 500;
+    }
+    &tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -10px;
+        padding-top: 2.5px;
+    }
+    &tag {
+        min-width: 115px;
+        padding: 0 30px;
+        box-sizing: border-box;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: $primary-color;
+        border-radius: 10px;
+        margin: 10px 10px 0 0;
+    }
+    &flex-container{
+        display: flex;
+        justify-content: space-between;
+        margin: 24px 0 0;
+    }
+    &collapse-container{
+        display: grid;
+        column-gap: 6%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        margin-top: 24px;
+    }
+}

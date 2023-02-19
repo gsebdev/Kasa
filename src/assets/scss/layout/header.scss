@@ -1,0 +1,23 @@
+header {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        height: 63px;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        ul {
+            display: flex;
+            li {
+                margin-left: 60px;
+                font-weight: 500;
+                
+                a.active {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

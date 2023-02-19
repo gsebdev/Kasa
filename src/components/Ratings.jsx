@@ -1,4 +1,5 @@
 import star from '../assets/img/star.svg'
+import '../assets/scss/components/ratings.scss';
 
 export default function Ratings({ rating }) {
     
@@ -11,7 +12,7 @@ export default function Ratings({ rating }) {
                         </svg>
                     </span>)
     }
-    
+
     return (
         <div className="ratings">
             {stars}

@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react"
 import arrow from '../assets/img/arrow-navigation.svg'
+import '../assets/scss/components/slideshow.scss';
 
 
 export default function Slideshow({ images, alt="", slideDuration=300, loadedCallback }){

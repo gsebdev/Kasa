@@ -4,6 +4,7 @@ import Collapse from "../components/Collapse"
 import Loading from "../components/Loading"
 import Ratings from "../components/Ratings"
 import Slideshow from "../components/Slideshow"
+import '../assets/scss/pages/details.scss';
 
 export default function Details() {
     const [loading, setLoading] = useState(true)

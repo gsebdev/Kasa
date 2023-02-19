@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom'
 import aboutCover from '../assets/img/about-cover.jpg'
 import Collapse from '../components/Collapse'
 import Cover from '../components/Cover'
-
+import '../assets/scss/pages/about.scss';
 
 export default function About() {
     const sections = useLoaderData()

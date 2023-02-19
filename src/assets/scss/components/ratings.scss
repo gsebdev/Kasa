@@ -1,0 +1,20 @@
+@import '../variables.scss';
+.ratings {
+    display: flex;
+    &__star{
+        margin-left: 10px;
+        svg{
+            height: 30px;
+            width: 30px;
+            display: block;
+            fill: #E3E3E3;
+        }
+        
+        &.active {
+            svg{
+              fill: $primary-color;  
+            }
+            
+        }
+    }
+}
