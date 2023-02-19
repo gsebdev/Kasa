@@ -1,18 +1,19 @@
-
-
 const api = {
     getAll: async () => {
         const response = await fetch('http://localhost:3000/logements.json')
         const accomodationsList = await response.json()
         return accomodationsList
     },
-    getOneById: async (id) => {
+    getOneById: async ({ params }) => {
+        if(!params.id) {
+            throw new Response('Not found', {status: 404})
+        }
         const response = await fetch('http://localhost:3000/logements.json')
         const accomodationsList = await response.json()
-        const accomodation = accomodationsList.find(item => item.id === id)
+        const accomodation = accomodationsList.find(item => item.id === params.id)
         
         if(!accomodation) {
-            throw new Error('error', {cause: 404})
+            throw new Response('Not found', {status: 404})
         }
 
         return accomodation     

@@ -1,23 +1,14 @@
 import './assets/scss/main.scss';
-import { Routes, Route, Navigate, BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './components/Layout';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './pages/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Details from './pages/Details';
-import NotFound from './pages/NotFound';
+import Error from './pages/Error';
+import api from './api/api';
 
-/* async function dataLoader(){
-  try {
-    const response = await fetch('http://localhost:3000/logements.json')
-    const accomodationsList = await response.json()
-    return accomodationsList
-  }
-  catch(err) {
-    throw new Error(err)
-  }
-} */
 
-/* const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
@@ -25,36 +16,31 @@ import NotFound from './pages/NotFound';
       {
         index: true,
         element: <Home />,
-        loader: dataLoader,
+        errorElement: <Error />,
+        loader: api.getAll
       },
       {
         path: 'accomodation/:id',
-        element: <Home single={true} />
+        element: <Details />,
+        errorElement: <Error />,
+        loader: api.getOneById
       },
       {
         path: 'about',
-        element: <About />
+        element: <About />,
+        loader: api.getAllAbout
+      },
+      {
+        path: '*',
+        element: <Error status={404}/>
       }
     ]
 
   }
-]) */
+])
+
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/'  element={<Layout />} >
-          <Route index element={<Home />} />
-          <Route path='accomodation/:id' element={<Details />} />
-          <Route path='about' element={<About />} />
-          <Route path='not-found' element={<NotFound />} />
-          <Route path='*' element={<Navigate to='/not-found' />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-   
-  );
-  //return <RouterProvider router={router} />
+  return <RouterProvider router={router} />
 }
 
 export default App;

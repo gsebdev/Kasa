@@ -2,13 +2,13 @@ import React, { useEffect, useMemo, useRef, useState } from "react"
 import arrow from '../assets/img/arrow-navigation.svg'
 
 
-export default function Slideshow({ images, alt="", slideDuration=300 }){
+export default function Slideshow({ images, alt="", slideDuration=300, loadedCallback }){
 
     const [position, setPosition] = useState(1)
     const [ transitionDuration, setTransitionDuration ] = useState(slideDuration)
     const preventSlide = useRef(false)
     const slideCounter = useRef(1)
-    
+
     const imagesToDisplay = useMemo(() => [images[images.length - 1], ...images, images[0]], [images])
     const slideshowImages = useMemo(() => imagesToDisplay.map((image, index) => {
         return (
@@ -16,12 +16,13 @@ export default function Slideshow({ images, alt="", slideDuration=300 }){
                 key={index + image} 
                 className='slideshow__image' 
                 src={image} 
-                alt={alt} 
+                alt={alt}
             />
         )
     }), [imagesToDisplay, alt])
 
     
+
     useEffect(() => {
         const resetNavigation = setTimeout(() => {
             if(position === images.length + 1){
@@ -66,7 +67,7 @@ export default function Slideshow({ images, alt="", slideDuration=300 }){
 
     return (
         <div className="slideshow__container">
-            
+
             {images.length > 1 && <React.Fragment>
                 <div className="slideshow__next slideshow__navigation" onClick={() => {handleClick('next')}}>
                     <img src={arrow} alt="" />
@@ -79,6 +80,9 @@ export default function Slideshow({ images, alt="", slideDuration=300 }){
              
              <div 
                 className="slideshow__images-container"
+                onLoad={() => { console.log('loade') 
+                loadedCallback()}
+            }
                 style= { {
                     gridTemplateColumns: `repeat(${images.length + 2}, 100%)`,
                     transform: `translateX(-${position * 100}%)`,

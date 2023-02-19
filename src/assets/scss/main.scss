@@ -34,7 +34,7 @@ h1 {
 #root {
     height: 100%;
     padding-top: 40px;
-    min-height: 100vh;
+    min-height: calc(100vh + 200px);
     box-sizing: border-box;
     display: grid;
     grid-template-rows: auto 1fr auto ;
@@ -45,6 +45,7 @@ header, main {
     max-width: $page-max-width;
     box-sizing: border-box;
     width: 100%;
+    position: relative;
 }
 main {
     padding-bottom: 40px;
@@ -122,6 +123,7 @@ footer {
 // home page
 .home {
     &__row {
+        overflow: hidden;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 60px;
@@ -132,7 +134,7 @@ footer {
         article {
             position: relative;
             width: 100%;
-            background: $primary-color;
+            background: rgb(191, 191, 191);
             border-radius: 10px;
             overflow: hidden;
             padding-bottom: 100%;
@@ -415,3 +417,33 @@ footer {
         transform: translateX(-100%);
     }
 }
+
+
+// loader
+.loader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+  &__spinner{
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: radial-gradient(farthest-side,$primary-color 94%,#0000) top/9px 9px no-repeat,
+            conic-gradient(#0000 30%,$primary-color);
+        -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+        animation: spin 1s infinite linear;
+    }  
+} 
+ 
+ @keyframes spin {
+    100% {
+       transform: rotate(1turn);
+    }
+ }
