@@ -6,6 +6,7 @@ import About from './pages/About';
 import Details from './pages/Details';
 import Error from './pages/Error';
 import api from './api/api';
+import { defer } from "react-router-dom"
 
 
 const router = createBrowserRouter([

@@ -12,7 +12,7 @@ function Home() {
 
     const handleLoadedCard = (id) => {
         cardLoadedList.current[id] = true
-        if(Object.keys(cardLoadedList.current).length === accomodations.length){
+        if(Object.keys(cardLoadedList.current).length >= accomodations.length){
             setLoading(false)
         }
     }

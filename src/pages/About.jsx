@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useLoaderData } from 'react-router-dom'
 import aboutCover from '../assets/img/about-cover.jpg'
 import Collapse from '../components/Collapse'
 import Cover from '../components/Cover'
 
-export default function About() {
-    const [ loading, setLoading ] = useState(true)
-    const sections = useLoaderData()
 
+export default function About() {
+    const sections = useLoaderData()
     return (
         <React.Fragment>
-           <Cover
-                altText='paysage de montagne'
-                image={aboutCover}
-                additionalClass='about__cover'
+            <Cover
+                    altText='paysage de montagne'
+                    image={aboutCover}
+                    additionalClass='about__cover'
             />
             <div>
-              {
+            {
                 sections.map((section, index) => {
                     return (
                         <Collapse
@@ -29,7 +28,7 @@ export default function About() {
                 })
             }  
             </div>
-        </React.Fragment>
+       </React.Fragment>
         
     )
 }
