@@ -5,7 +5,9 @@ import '../assets/scss/layout/header.scss'
 export default function Header(){
     return (
         <header>
-            <img src={ logo } alt='logo' className="logo" />
+            <Link to='/'>
+                <img src={ logo } alt='logo' className="logo" />
+            </Link>
             <nav>
                 <ul>
                     <li><Link className={useMatch('/') ? 'active' : ''} to='/'>Accueil</Link></li>

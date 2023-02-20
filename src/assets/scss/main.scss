@@ -29,11 +29,14 @@ h1 {
 #root {
     height: 100%;
     padding-top: 40px;
-    min-height: calc(100vh + 200px);
+    min-height: 100vh;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: auto 1fr auto ;
     justify-items: center;
+    @media screen and (max-width: $mobile-breakpoint) {
+        padding-top: 20px;
+    }
 }
 
 header, main {
@@ -42,8 +45,15 @@ header, main {
     box-sizing: border-box;
     width: 100%;
     position: relative;
+    @media screen and (max-width: $mobile-breakpoint) {
+        padding: 0 $page-horizontal-padding-mobile;
+    }
 }
 
 main {
     padding-bottom: 40px;
+    padding-top: 25px;
+    @media screen and (max-width: $mobile-breakpoint) {
+        padding-top: 0px;
+    }
 }

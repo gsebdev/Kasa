@@ -1,8 +1,13 @@
+@import '../variables.scss';
 .about{
     &__cover {
         margin: 25px 0 30px !important;
+        height: 223px !important;
     }
     &__collapse {
         margin-bottom: 30px;
+        @media screen and (max-width: $mobile-breakpoint) {
+            margin-bottom: 20px;
+        }
     }
 }

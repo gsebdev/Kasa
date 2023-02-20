@@ -18,22 +18,25 @@ export default function Details() {
                     images={details.pictures} 
                     alt={details.title}
                     loadedCallback={() => {setLoading(false)}} 
+                    className='accomodation__slideshow'
                 />
-                <div className="accomodation__flex-container">
+                <div className="accomodation__header">
+                    <div className="accomodation__flex-container">
                         <div>
                             <h1 className="accomodation__title">{details.title}</h1>
                             <p className="accomodation__location">{details.location}</p>
                         </div>
+                        <div className="accomodation__tags-container">
+                                { details.tags.map(tag => <span key={tag} className="accomodation__tag">{tag}</span>) }
+                        </div>
+                    </div>
+                    <div className="accomodation__flex-container">
                         <div className="accomodation__host">
                             <p>{details.host.name.split(' ')[0]}<br />{details.host.name.split(' ')[1]}</p>
                             <img src={details.host.picture} alt={details.host.name} />
                         </div>
-                </div>
-                <div className="accomodation__flex-container">
-                        <div className="accomodation__tags-container">
-                                { details.tags.map(tag => <span key={tag} className="accomodation__tag">{tag}</span>) }
-                        </div>
                         <Ratings rating={+details.rating}/>
+                    </div>
                 </div>
                 <div className="accomodation__collapse-container">
                         <Collapse title="Description" body={details.description}/>

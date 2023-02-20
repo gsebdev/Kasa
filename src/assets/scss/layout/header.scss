@@ -1,11 +1,15 @@
+@import '../variables.scss';
 header {
-    margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
     .logo {
         height: 63px;
+        @media screen and (max-width: $mobile-breakpoint) {
+            height: 43px;
+        }
     }
     nav {
+        
         display: flex;
         align-items: center;
         ul {
@@ -13,7 +17,11 @@ header {
             li {
                 margin-left: 60px;
                 font-weight: 500;
-                
+                @media screen and (max-width: $mobile-breakpoint) {
+                    font-size: 12px;
+                    margin-left: 10px;
+                    text-transform: uppercase;
+                }
                 a.active {
                     text-decoration: underline;
                 }

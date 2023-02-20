@@ -3,7 +3,7 @@ import arrow from '../assets/img/arrow-navigation.svg'
 import '../assets/scss/components/slideshow.scss';
 
 
-export default function Slideshow({ images, alt="", slideDuration=300, loadedCallback }){
+export default function Slideshow({ images, alt="", slideDuration=300, loadedCallback, className }){
 
     const [position, setPosition] = useState(1)
     const [ transitionDuration, setTransitionDuration ] = useState(slideDuration)
@@ -67,7 +67,7 @@ export default function Slideshow({ images, alt="", slideDuration=300, loadedCal
     }
 
     return (
-        <div className="slideshow__container">
+        <div className={"slideshow__container " + className}>
 
             {images.length > 1 && <React.Fragment>
                 <div className="slideshow__next slideshow__navigation" onClick={() => {handleClick('next')}}>

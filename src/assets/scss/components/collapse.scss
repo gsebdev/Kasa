@@ -13,12 +13,18 @@
         cursor: pointer;
         height: 52px;
         box-sizing: border-box;
+        @media screen and (max-width: $mobile-breakpoint) {
+            height: 30px;
+            font-size: 13px;
+            border-radius: 5px;
+        }
     }
     &__title {
         color: white;
         font-weight: 500;
     }
     &__icon {
+        display: block;
         transform: rotate(180deg);
         transition: transform 0.3s ease-in-out;
         img {
@@ -26,6 +32,10 @@
             width: 16px;
             object-fit: contain;
             transform: rotate(90deg);
+            @media screen and (max-width: $mobile-breakpoint) {
+                height: 16px;
+                width: 9px;
+            }
         }
         
     }
@@ -40,7 +50,12 @@
         & > * {
             display: block;
             padding: 40px 20px 27px;
+            @media screen and (max-width: $mobile-breakpoint) {
+                font-size: 12px;
+                padding: 30px 10px 20px;
+            }
         }
+        
     }
     &.open {
         .collapse__{

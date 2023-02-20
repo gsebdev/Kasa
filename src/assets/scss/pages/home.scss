@@ -4,10 +4,20 @@
         overflow: hidden;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 60px;
-        row-gap: 50px;
+        column-gap: 4vw;
+        row-gap: 3.5vw;
         background-color: $secondary-color;
         border-radius: 25px;
         padding: 56px 50px;
+        @media screen and (min-width: 1640px) {
+            column-gap: 60px;
+            row-gap: 50px;
+        }
+        @media screen and (max-width: $mobile-breakpoint) {
+            display: block;
+            background-color: none;
+            padding: 0;
+            border-radius: 0;
+        }
     }
 }

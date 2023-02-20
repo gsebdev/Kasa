@@ -2,19 +2,19 @@
 .ratings {
     display: flex;
     &__star{
+        mask-image: url('../../img/star.svg');
+        background-color: #E3E3E3;
         margin-left: 10px;
-        svg{
-            height: 30px;
-            width: 30px;
-            display: block;
-            fill: #E3E3E3;
+        height: 30px;
+        width: 30px;
+        display: block;
+        @media screen and (max-width: $mobile-breakpoint) {
+            margin-left: 5px;
+            height: 15px;
+            width: 15px;
         }
-        
         &.active {
-            svg{
-              fill: $primary-color;  
-            }
-            
+            background-color: $primary-color;
         }
     }
 }
