@@ -20,7 +20,6 @@ export default function Collapse({ title, body, className='' }) {
     useEffect(() => {
         if(open) {
             setHeight(bodyText.current.offsetHeight)
-            console.log(height)
         }
     }, [open])
     

@@ -1,4 +1,3 @@
-import star from '../assets/img/star.svg'
 import '../assets/scss/components/ratings.scss';
 
 export default function Ratings({ rating }) {
