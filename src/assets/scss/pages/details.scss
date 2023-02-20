@@ -37,9 +37,13 @@
         margin: 6px 0 0;
         line-height: 51px;
         vertical-align: middle;
+        @media screen and (max-width: $tablet-breakpoint) {
+            line-height: unset;
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
         @media screen and (max-width: $mobile-breakpoint) {
             font-size: 18px;
-            line-height: unset;
             margin: 0 0 5px;
         }
         
@@ -48,6 +52,9 @@
        margin: 0;
        display: block;
        font-weight: 500;
+       @media screen and (max-width: $tablet-breakpoint) {
+        font-size: 16px;
+       }
        @media screen and (max-width: $mobile-breakpoint) {
         font-size: 14px;
        }
@@ -76,11 +83,15 @@
         background-color: $primary-color;
         border-radius: 10px;
         margin: 10px 10px 0 0;
+        @media screen and (max-width: $tablet-breakpoint) {
+            font-size: 12px;
+            height: 24px;
+            padding: 0 20px;
+            min-width: 84px;
+        }
         @media screen and (max-width: $mobile-breakpoint) {
             font-size: 10px;
             height: 18px;
-            min-width: 84px;
-            padding: 0 20px;
             border-radius: 5px;
         }
     }

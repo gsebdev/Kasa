@@ -28,6 +28,11 @@
         padding-left: 24px;
         cursor: pointer;
         z-index: 1;
+        @media screen and (max-width: $tablet-breakpoint) {
+            img {
+                height: 40px;
+            }
+        }
         @media screen and (max-width: $mobile-breakpoint) {
             img {
                 height: 20px;

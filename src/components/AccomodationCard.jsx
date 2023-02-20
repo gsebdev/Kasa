@@ -10,7 +10,9 @@ export default function AccomodationCard({ title, image, id, loadedCallback }) {
                     <img
                     src={ image } 
                     alt={ title }
-                    onLoad={ () => {loadedCallback(id)} }/>
+                    onLoad={ () => {loadedCallback(id)} }
+                    />
+                    
             </article>
         </Link>
     )

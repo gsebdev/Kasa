@@ -34,6 +34,9 @@ h1 {
     display: grid;
     grid-template-rows: auto 1fr auto ;
     justify-items: center;
+    @media screen and (max-width: $tablet-breakpoint) {
+        padding-top: 30px;
+    }
     @media screen and (max-width: $mobile-breakpoint) {
         padding-top: 20px;
     }
@@ -45,6 +48,9 @@ header, main {
     box-sizing: border-box;
     width: 100%;
     position: relative;
+    @media screen and (max-width: $tablet-breakpoint) {
+        padding: 0 $page-horizontal-padding-tablet;
+    }
     @media screen and (max-width: $mobile-breakpoint) {
         padding: 0 $page-horizontal-padding-mobile;
     }

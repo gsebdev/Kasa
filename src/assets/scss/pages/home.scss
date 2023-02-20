@@ -13,6 +13,11 @@
             column-gap: 60px;
             row-gap: 50px;
         }
+        @media screen and (max-width: $tablet-breakpoint) {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 25px 25px;
+            border-radius: 10px;
+        }
         @media screen and (max-width: $mobile-breakpoint) {
             display: block;
             background-color: none;

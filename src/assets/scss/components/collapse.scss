@@ -13,6 +13,11 @@
         cursor: pointer;
         height: 52px;
         box-sizing: border-box;
+        @media screen and (max-width: $tablet-breakpoint) {
+            height: 45px;
+            font-size: 16px;
+            border-radius: 8px;
+        }
         @media screen and (max-width: $mobile-breakpoint) {
             height: 30px;
             font-size: 13px;
@@ -32,6 +37,10 @@
             width: 16px;
             object-fit: contain;
             transform: rotate(90deg);
+            @media screen and (max-width: $tablet-breakpoint) {
+                height: 20px;
+                width: 12px;
+            }
             @media screen and (max-width: $mobile-breakpoint) {
                 height: 16px;
                 width: 9px;
@@ -50,6 +59,10 @@
         & > * {
             display: block;
             padding: 40px 20px 27px;
+            @media screen and (max-width: $tablet-breakpoint) {
+                font-size: 14px;
+                padding: 35px 12px 22px;
+            }
             @media screen and (max-width: $mobile-breakpoint) {
                 font-size: 12px;
                 padding: 30px 10px 20px;

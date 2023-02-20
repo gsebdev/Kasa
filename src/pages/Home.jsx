@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import AccomodationCard from "../components/AccomodationCard"
 import homeCover from '../assets/img/home-cover.jpg'
 import Cover from "../components/Cover"
@@ -17,6 +17,16 @@ function Home() {
             setLoading(false)
         }
     }
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            if(loading) {
+                setLoading(false)
+            }
+        }, 3000)
+
+        return () => { clearTimeout(timeout)}
+    }, [loading])
 
     const accomodationCards = accomodations.map((accomodation) => {
         return <AccomodationCard

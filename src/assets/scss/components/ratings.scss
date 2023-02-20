@@ -8,6 +8,11 @@
         height: 30px;
         width: 30px;
         display: block;
+        @media screen and (max-width: $tablet-breakpoint) {
+            margin-left: 8px;
+            height: 20px;
+            width: 20px;
+        }
         @media screen and (max-width: $mobile-breakpoint) {
             margin-left: 5px;
             height: 15px;
