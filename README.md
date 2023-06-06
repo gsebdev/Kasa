@@ -1,11 +1,15 @@
 # Kasa
+This project was carried out as part of a training course with the OpenClassrooms platform.\
+This is a ReactJS web app for an apartment rentals between individuals platform.\
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+## Features
+* Fetch appartment list from a JSON file
+* Slideshow component
+* Collapse component
+* React-router used for dynamic routes (id of the appartment) to display the appartment details page
 ## Available Scripts
 
 In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
