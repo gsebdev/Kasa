@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7261200b.css",
+    "main.js": "/static/js/main.70e6b57f.js",
+    "static/media/about-cover.jpg": "/static/media/about-cover.e11e6eadd2e17c64078b.jpg",
+    "static/media/home-cover.jpg": "/static/media/home-cover.0b7717e39cd46a07ae95.jpg",
+    "index.html": "/index.html",
+    "static/media/arrow-navigation.svg": "/static/media/arrow-navigation.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "static/media/star.svg": "/static/media/star.956dff3a619b063add76.svg",
+    "main.7261200b.css.map": "/static/css/main.7261200b.css.map",
+    "main.70e6b57f.js.map": "/static/js/main.70e6b57f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7261200b.css",
+    "static/js/main.70e6b57f.js"
+  ]
+}
