@@ -1,7 +1,7 @@
 # Kasa
 This project was carried out as part of a training course with the OpenClassrooms platform.\
 This is a ReactJS web app for an apartment rentals between individuals platform.\
-
+[See demo](https://gsebdev.github.io/Kasa/)
 ## Features
 * Fetch appartment list from a JSON file
 * Slideshow component
