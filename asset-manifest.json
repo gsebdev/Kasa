@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "https://gsebdev.github.io/Kasa/static/css/main.b68c58cf.css",
-    "main.js": "https://gsebdev.github.io/Kasa/static/js/main.8298cc4a.js",
+    "main.js": "https://gsebdev.github.io/Kasa/static/js/main.ec4bfd45.js",
     "static/media/about-cover.jpg": "https://gsebdev.github.io/Kasa/static/media/about-cover.e11e6eadd2e17c64078b.jpg",
     "static/media/home-cover.jpg": "https://gsebdev.github.io/Kasa/static/media/home-cover.0b7717e39cd46a07ae95.jpg",
     "index.html": "https://gsebdev.github.io/Kasa/index.html",
     "static/media/arrow-navigation.svg": "https://gsebdev.github.io/Kasa/static/media/arrow-navigation.19918a1634b1441a25ae0b50e6b1f85b.svg",
     "static/media/star.svg": "https://gsebdev.github.io/Kasa/static/media/star.956dff3a619b063add76.svg",
     "main.b68c58cf.css.map": "https://gsebdev.github.io/Kasa/static/css/main.b68c58cf.css.map",
-    "main.8298cc4a.js.map": "https://gsebdev.github.io/Kasa/static/js/main.8298cc4a.js.map"
+    "main.ec4bfd45.js.map": "https://gsebdev.github.io/Kasa/static/js/main.ec4bfd45.js.map"
   },
   "entrypoints": [
     "static/css/main.b68c58cf.css",
-    "static/js/main.8298cc4a.js"
+    "static/js/main.ec4bfd45.js"
   ]
 }
