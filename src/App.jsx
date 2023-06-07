@@ -1,5 +1,5 @@
 import './assets/scss/main.scss';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -7,8 +7,7 @@ import Details from './pages/Details';
 import Error from './pages/Error';
 import api from './api/api';
 
-
-const router = createBrowserRouter([
+const routerArray = [
   {
     path: '/',
     element: <Layout />,
@@ -38,7 +37,8 @@ const router = createBrowserRouter([
     ]
 
   }
-])
+]
+const router = process.env.REACT_APP_USE_HASH_ROUTER === 'TRUE' ? createHashRouter(routerArray) : createBrowserRouter(routerArray)
 
 function App() {
   return <RouterProvider router={router} />
