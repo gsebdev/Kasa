@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "https://gsebdev.github.io/Kasa/ BUILD_PATH='demo'/static/css/main.b62dfe40.css",
-    "main.js": "https://gsebdev.github.io/Kasa/ BUILD_PATH='demo'/static/js/main.b50a77c2.js",
-    "static/media/about-cover.jpg": "https://gsebdev.github.io/Kasa/ BUILD_PATH='demo'/static/media/about-cover.e11e6eadd2e17c64078b.jpg",
-    "static/media/home-cover.jpg": "https://gsebdev.github.io/Kasa/ BUILD_PATH='demo'/static/media/home-cover.0b7717e39cd46a07ae95.jpg",
-    "index.html": "https://gsebdev.github.io/Kasa/ BUILD_PATH='demo'/index.html",
-    "static/media/arrow-navigation.svg": "https://gsebdev.github.io/Kasa/ BUILD_PATH='demo'/static/media/arrow-navigation.19918a1634b1441a25ae0b50e6b1f85b.svg",
-    "static/media/star.svg": "https://gsebdev.github.io/Kasa/ BUILD_PATH='demo'/static/media/star.956dff3a619b063add76.svg",
-    "main.b62dfe40.css.map": "https://gsebdev.github.io/Kasa/ BUILD_PATH='demo'/static/css/main.b62dfe40.css.map",
-    "main.b50a77c2.js.map": "https://gsebdev.github.io/Kasa/ BUILD_PATH='demo'/static/js/main.b50a77c2.js.map"
+    "main.css": "https://gsebdev.github.io/Kasa/ BUILD_PATH=./demo/static/css/main.99ba469f.css",
+    "main.js": "https://gsebdev.github.io/Kasa/ BUILD_PATH=./demo/static/js/main.347418bc.js",
+    "static/media/about-cover.jpg": "https://gsebdev.github.io/Kasa/ BUILD_PATH=./demo/static/media/about-cover.e11e6eadd2e17c64078b.jpg",
+    "static/media/home-cover.jpg": "https://gsebdev.github.io/Kasa/ BUILD_PATH=./demo/static/media/home-cover.0b7717e39cd46a07ae95.jpg",
+    "index.html": "https://gsebdev.github.io/Kasa/ BUILD_PATH=./demo/index.html",
+    "static/media/arrow-navigation.svg": "https://gsebdev.github.io/Kasa/ BUILD_PATH=./demo/static/media/arrow-navigation.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "static/media/star.svg": "https://gsebdev.github.io/Kasa/ BUILD_PATH=./demo/static/media/star.956dff3a619b063add76.svg",
+    "main.99ba469f.css.map": "https://gsebdev.github.io/Kasa/ BUILD_PATH=./demo/static/css/main.99ba469f.css.map",
+    "main.347418bc.js.map": "https://gsebdev.github.io/Kasa/ BUILD_PATH=./demo/static/js/main.347418bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.b62dfe40.css",
-    "static/js/main.b50a77c2.js"
+    "static/css/main.99ba469f.css",
+    "static/js/main.347418bc.js"
   ]
 }
