@@ -1,6 +1,6 @@
 const api = {
     getAll: async () => {
-        const response = await fetch('http://localhost:3000/logements.json')
+        const response = await fetch(process.env.PUBLIC_URL + 'logements.json')
         const accomodationsList = await response.json()
         return accomodationsList
     },
@@ -8,7 +8,7 @@ const api = {
         if(!params.id) {
             throw new Response('Not found', {status: 404})
         }
-        const response = await fetch('http://localhost:3000/logements.json')
+        const response = await fetch(process.env.PUBLIC_URL + 'logements.json')
         const accomodationsList = await response.json()
         const accomodation = accomodationsList.find(item => item.id === params.id)
         
@@ -19,7 +19,7 @@ const api = {
         return accomodation     
     },
     getAllAbout: async () => {
-        const response = await fetch('http://localhost:3000/about.json')
+        const response = await fetch(process.env.PUBLIC_URL + 'about.json')
         const aboutTextsList = await response.json()
         return aboutTextsList
     }
